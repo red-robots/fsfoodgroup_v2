@@ -4,7 +4,7 @@ $border = get_bloginfo("template_url") . "/images/banner-border.jpg";
 if($banner) { ?>
 <div id="banner" class="banner cf">
 	<?php if( get_custom_logo() ) { ?>
-        <div class="logo">
+        <div class="logo zoomIn wow">
         	<?php the_custom_logo(); ?>
         </div>
     <?php } else { ?>

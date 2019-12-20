@@ -671,7 +671,14 @@ html[xmlns] .flexslider .slides{display:block}
 *{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 a,button,input{-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 pre{font-family:"Courier 10 Pitch",Courier,monospace;font-size:13px;line-height:1.3}
-body{font-family:"Nunito Sans",sans-serif;font-size:16px;line-height:1.5;color:#333}
+body{font-family:"Nunito Sans",sans-serif;font-size:16px;line-height:1.5;color:#000}
+h1,h2,h3,h4,h5,h6{line-height:1.2;font-weight:500}
+h1{font-size:2rem}
+h2{font-size:1.8rem}
+h3{font-size:1.5rem}
+h4{font-size:1.2rem}
+h5{font-size:1rem}
+h6{font-size:.9rem}
 .cf:before,.cf:after{content:" ";display:table}
 .cf:after{clear:both}
 .cf{*zoom:1}
@@ -714,5 +721,43 @@ body.home .site-header{position:absolute}
 #content .content-area,#content .site-main{width:100%;float:left}
 .section{position:relative}
 .section .textwrap{position:relative;z-index:10}
-.section.row1{width:100%;float:left;padding-top:70px;padding-bottom:70px}
+.section.row1{width:100%;float:left;padding-top:70px;padding-bottom:30px}
 .section.row1 .banner-mirror{position:absolute;top:0;left:0}
+@media(min-width:960px){.section.row1 .textwrap{max-width:1100px;width:100%;margin:0 auto}
+}.section.row1 .textwrap h2.title{margin-top:0;margin-bottom:15px}
+.section.row1 .buttondiv{margin-top:60px;margin-bottom:80px}
+.scrolldown .arrowdown{text-decoration:none;position:relative;display:inline-block;width:42px;height:40px;overflow:hidden;-webkit-animation:MoveUpDown 1.2s linear infinite;animation:MoveUpDown 1.2s linear infinite}
+.scrolldown .arrowdown:before,.scrolldown .arrowdown:after{content:"";display:block;width:30px;height:1px;background:#000;position:absolute;top:18px;left:0}
+.scrolldown .arrowdown:before{width:32px;-webkit-transform:translateX(-6px) rotate(45deg);-ms-transform:translateX(-6px) rotate(45deg);transform:translateX(-6px) rotate(45deg)}
+.scrolldown .arrowdown:after{-webkit-transform:translateX(17px) rotate(-45deg);-ms-transform:translateX(17px) rotate(-45deg);transform:translateX(17px) rotate(-45deg)}
+@-webkit-keyframes MoveUpDown{0%,100%{bottom:0}
+50%{bottom:15px}
+}@keyframes MoveUpDown{0%,100%{bottom:0}
+50%{bottom:15px}
+}.btn-default{text-decoration:none;-webkit-appearance:none;box-shadow:none;border:1px solid #000;background:transparent;padding:10px 25px;font-size:18px;line-height:1.2;color:#000;position:relative;overflow:hidden}
+.btn-default:before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:0;right:0;background:#000;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:50%;-ms-transform-origin:50%;transform-origin:50%;-webkit-transition-property:transform;-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-transition-duration:.3s;transition-duration:.3s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out}
+.btn-default:hover{color:#FFF}
+.btn-default:hover:before{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}
+.fsgroup{padding-bottom:80px}
+.fsgroup a,.fsgroup .wrap{display:block;width:100%;float:left;position:relative}
+.fsgroup .wrap:before,.fsgroup .wrap:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:-webkit-linear-gradient(left,rgba(0,0,0,0.65) 0,transparent 54%,transparent 97%);background:linear-gradient(to right,rgba(0,0,0,0.65) 0,transparent 54%,transparent 97%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000',endColorstr='#00000000',GradientType=1)}
+.fsgroup .wrap:after{opacity:.8}
+.fsgroup .fsimage{width:100%;float:left;position:relative;margin:10px 0}
+.fsgroup .featimg{width:100%;height:auto;float:left}
+.fsgroup .fslogo{position:absolute;top:50%;left:3%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:auto;height:8vw;z-index:10}
+.site-footer{width:100%;float:left;background:#000;color:#FFF;font-size:14px;padding-top:20px;padding-bottom:20px}
+.site-footer a{display:inline-block;text-decoration:none;color:#FFF}
+.site-footer a:hover{opacity:.65}
+.site-footer .flexcols{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.site-footer .ft-main-logo img{width:85px;height:auto}
+.site-footer .col{width:100%}
+.site-footer .col1{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+@media(min-width:960px){.site-footer .col1{width:20%}
+}@media(min-width:960px){.site-footer .col2{width:55%}
+}.site-footer .col3{text-align:center}
+@media(min-width:960px){.site-footer .col3{width:25%;text-align:right}
+}.site-footer .fsgrouplogos .flexwrap{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.site-footer .fsgrouplogos .fsgrplogo{padding:10px 25px}
+.site-footer .fsgrouplogos .fsgrplogo img{width:60px;height:auto;opacity:.55}
+@media(min-width:960px){.site-footer .fsgrouplogos .fsgrplogo img{width:auto;height:50px}
+}

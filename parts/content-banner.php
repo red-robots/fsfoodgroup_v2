@@ -13,6 +13,7 @@ if($banner) { ?>
         </h1>
     <?php } ?>
 	<img class="banner-image" src="<?php echo $banner['url'] ?>" alt="<?php echo $banner['title'] ?>" />
+    <div class="mobileMenu"><button class="menu-mobile menu-toggle menutoggle2" aria-controls="primary-menu" aria-expanded="false"><span class="sr"><?php esc_html_e( 'MENU', 'bellaworks' ); ?></span><span class="bar"></span></button></div>
 </div>
 <div class="banner-border"></div>
 <div class="banner-mirror"><img src="<?php echo $banner['url'] ?>" alt="<?php echo $banner['title'] ?>" /></div>

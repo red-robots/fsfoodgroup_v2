@@ -17,11 +17,14 @@
 	<header id="masthead" class="site-header animated fadeInDown" role="banner">
 		<div class="wrapper">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'bellaworks' ); ?></button>
+				<div class="nav-wrap cf">
+					<a href="#" class="closemenubtn menu-mobile"></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','container_class'=>'main-menu-wrap' ) ); ?>
+				</div>
 			</nav><!-- #site-navigation -->
 		</div><!-- wrapper -->
 	</header><!-- #masthead -->
+	<button class="menu-mobile menu-toggle menutoggle1" aria-controls="primary-menu" aria-expanded="false"><span class="sr"><?php esc_html_e( 'MENU', 'bellaworks' ); ?></span><span class="bar"></span></button>
 
 	<?php get_template_part("parts/content","banner"); ?>
 

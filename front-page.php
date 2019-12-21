@@ -24,14 +24,14 @@ get_header(); ?>
 						<?php } ?>
 						<?php if ($buttonName && $buttonLink) { ?>
 							<div class="buttondiv cf"><a href="<?php echo $buttonLink ?>" class="btn-default"><?php echo $buttonName ?></a></div>
-							<div class="scrolldown"><span class="arrowdown"></span></div>
+							<div class="scrolldown"><a href="<?php echo $buttonLink ?>" class="arrowdown"></a></div>
 						<?php } ?>
 					</div>
 				</div>
 			</section>
 
 			<?php if( $fsgroup = get_field("fsgroup") ) { ?>
-			<section class="section fsgroup cf">
+			<section id="concepts" class="section fsgroup cf">
 				<div class="wrapper">
 					<div class="flexwrap">
 					<?php foreach ($fsgroup as $fs) { 
@@ -46,7 +46,7 @@ get_header(); ?>
 						}
 						$placeholder = get_bloginfo("template_url") . "/images/rectangle.png";
 						?>
-						<div class="fsgroup">
+						<div class="fsgroup-item cf">
 							<div class="fsimage">
 								<?php echo $openLink; ?>
 								<span class="wrap">

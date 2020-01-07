@@ -30,46 +30,59 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<?php if( $fsgroup = get_field("fsgroup") ) { ?>
-			<section id="concepts" class="section fsgroup cf">
-				<div class="wrapper">
-					<div class="flexwrap">
-					<?php foreach ($fsgroup as $fs) { 
-						$fsLogo = $fs['logo'];
-						$featImg = $fs['featured_image'];
-						$fsLink = $fs['link'];
-						$openLink = '';
-						$closeLink = '';
-						if($fsLink) {
-							$openLink = '<a href="'.$fsLink.'" target="_blank">';
-							$closeLink = '</a>';
-						}
-						$placeholder = get_bloginfo("template_url") . "/images/rectangle.png";
-						?>
-						<div class="fsgroup-item cf">
-							<div class="fsimage">
-								<?php echo $openLink; ?>
-								<span class="wrap">
-								<?php if ($fsLogo) { ?>
-									<img class="fslogo" src="<?php echo $fsLogo['url'] ?>" alt="<?php echo $fsLogo['title'] ?>">
-								<?php } ?>
-								<?php if ($featImg) { ?>
-									<img class="featimg" src="<?php echo $featImg['url'] ?>" alt="<?php echo $featImg['title'] ?>">
-								<?php } else { ?>
-									<img class="featimg nophoto" src="<?php echo $placeholder ?>" alt="" aria-hidden="true" />
-								<?php } ?>
-								</span>
-								<?php echo $closeLink; ?>
-							</div>
-						</div>
-					<?php } ?>
-					</div>
-				</div>
-			</section>
-			<?php } ?>
-
-
 		<?php endwhile; ?>
+
+		<?php  
+			$post_type = 'restaurants';
+			$args = array(
+				'posts_per_page' => -1,
+			    'post_type' => $post_type,
+			    'post_status' => 'publish',
+			);
+			$fsgroup = new WP_Query($args);
+		?>
+
+		<?php if( $fsgroup ) { ?>
+		<section id="concepts" class="section fsgroup cf">
+			<div class="wrapper">
+				<div class="flexwrap">
+				<?php while ( $fsgroup->have_posts() ) : $fsgroup->the_post();
+
+					// $fsLogo = $fs['logo'];
+					// $featImg = $fs['featured_image'];
+					// $fsLink = $fs['link'];
+					$fsLogo = get_field("logo");
+					$featImg = get_field("featured_image");
+					$fsLink = get_field("link");
+					$openLink = '';
+					$closeLink = '';
+					if($fsLink) {
+						$openLink = '<a href="'.$fsLink.'" target="_blank">';
+						$closeLink = '</a>';
+					}
+					$placeholder = get_bloginfo("template_url") . "/images/rectangle.png";
+					?>
+					<div class="fsgroup-item cf">
+						<div class="fsimage">
+							<?php echo $openLink; ?>
+							<span class="wrap">
+							<?php if ($fsLogo) { ?>
+								<img class="fslogo" src="<?php echo $fsLogo['url'] ?>" alt="<?php echo $fsLogo['title'] ?>">
+							<?php } ?>
+							<?php if ($featImg) { ?>
+								<img class="featimg" src="<?php echo $featImg['url'] ?>" alt="<?php echo $featImg['title'] ?>">
+							<?php } else { ?>
+								<img class="featimg nophoto" src="<?php echo $placeholder ?>" alt="" aria-hidden="true" />
+							<?php } ?>
+							</span>
+							<?php echo $closeLink; ?>
+						</div>
+					</div>
+				<?php endwhile; wp_reset_postdata(); ?>	
+				</div>
+			</div>
+		</section>
+		<?php } ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->

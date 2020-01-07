@@ -19,6 +19,7 @@ function my_login_logo() {
     body.login div#login h1 a {
       background-image: url(<?php echo $logo_url; ?>);
       background-size: contain;
+      background-color: #000;
       width: 100%;
       height: 100px;
       margin-bottom: 10px;

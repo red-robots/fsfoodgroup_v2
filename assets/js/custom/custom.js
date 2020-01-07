@@ -95,4 +95,11 @@ jQuery(document).ready(function ($) {
 		$('.main-navigation').toggleClass("animated fadeIn open");
 	});
 
+	$(document).on("click",".menu-mobile.closemenubtn",function(e){
+		e.preventDefault();
+		$('.menu-mobile').removeClass('open');
+		$('body').removeClass('open-mobile-menu');
+		$('.main-navigation').removeClass("animated fadeIn open");
+	});
+
 });// END #####################################    END

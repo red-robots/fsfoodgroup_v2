@@ -13,9 +13,21 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site cf">
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
-
-	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+	
+	<?php $headerClass = ( is_front_page() ) ? ' animated fadeInDown':'subpage-header'; ?>
+	<header id="masthead" class="site-header cf <?php echo $headerClass ?>" role="banner">
 		<div class="wrapper">
+
+			<?php if ( !is_front_page() ) { ?>
+
+				<?php if( $main_logo = get_field("main_logo","option") ) { ?>
+		            <div class="logo-subpage">
+		            	<a href="<?php echo get_site_url(); ?>"><img src="<?php echo $main_logo['url'] ?>" alt="<?php echo get_bloginfo("name"); ?>"></a>
+		            </div>
+		        <?php } ?>
+						
+			<?php } ?>
+
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="nav-wrap cf">
 					<a href="#" class="closemenubtn menu-mobile"></a>

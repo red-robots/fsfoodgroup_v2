@@ -9,14 +9,12 @@ get_header(); ?>
 		<main id="main" class="site-main cf" role="main">
 	
 			<?php while ( have_posts() ) : the_post(); ?>
-
 			<section class="maintext">
 				<div class="wrapper text-center">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 					<div class="entry-content"><?php the_content(); ?></div>
 				</div>
 			</section>
-
 			<?php endwhile; ?>
 
 

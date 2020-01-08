@@ -87,6 +87,16 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	new WOW().init();
 
+	/* Press Pagination */
+	$(document).on("click",".presspage #pagination a",function(e){
+		e.preventDefault();
+		var pageURL = $(this).attr("href");
+		history.pushState({}, '', pageURL);
+		$(".press-articles").load(pageURL + " #articles",function(){
+
+		});
+	});
+
 
 	$(document).on("click",".menu-mobile",function(e){
 		e.preventDefault();

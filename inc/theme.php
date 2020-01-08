@@ -141,9 +141,9 @@ add_action( 'init', 'my_theme_add_editor_styles' );
 function change_post_menu_label() {
     global $menu;
     global $submenu;
-    $menu[5][0] = 'News';
-    $submenu['edit.php'][5][0] = 'News';
-    $submenu['edit.php'][10][0] = 'Add News Item';
+    $menu[5][0] = 'Press';
+    $submenu['edit.php'][5][0] = 'Articles';
+    $submenu['edit.php'][10][0] = 'Add Article';
     //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
     //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
     echo '';

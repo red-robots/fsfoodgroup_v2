@@ -94,3 +94,10 @@ $deskwidth: 1200px;
 	@include flexbox-wrap(wrap);
 	@include flexbox-direction(row);
 }
+@mixin flexgroup-center() {
+	@include flexbox();
+	@include flexbox-wrap(wrap);
+	@include flexbox-direction(row);
+	@include flexbox-align-items(center);
+	@include flexbox-justify(center);
+}

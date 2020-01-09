@@ -2,7 +2,8 @@
 /**
  * Template Name: About Us
  */
-
+$insert = ( isset($_GET['insert']) && $_GET['insert']==1 ) ? true : false;
+insert_teams($insert);
 get_header(); ?>
 
 	<div id="primary" class="content-area default cf presspage">

@@ -1,7 +1,5 @@
 <?php 
 $banner = get_field("banner");
-// $insert = ( isset($_GET['insert']) && $_GET['insert']==1 ) ? true : false;
-// insert_teams($insert);
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">

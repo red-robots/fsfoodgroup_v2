@@ -747,6 +747,11 @@ body.subpage .main-navigation {
 		}
 	}
 }
+body.single-post {
+	.article .wrapper {
+		max-width: 1000px;
+	}
+}
 .section.press-articles {
 	padding-top: 0;
 	padding-bottom: 50px;

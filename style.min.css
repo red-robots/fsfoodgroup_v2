@@ -828,7 +828,8 @@ body.subpage .main-navigation ul.menu>li:hover>a{color:rgba(255,255,255,0.35) !i
 .section.press-articles a.feat-image:hover .photo{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 .section.press-articles a.feat-video:hover .play-video span{background:red}
 .featured-video{margin-top:50px}
-.featured-video .embedvideo{max-width:900px;width:100%;margin:0 auto;border:1px solid #000;padding:2px}
+@media(min-width:820px){.featured-video{margin-top:80px}
+}.featured-video .embedvideo{max-width:900px;width:100%;margin:0 auto;border:1px solid #000;padding:2px}
 .featured-video iframe{width:100% !important;height:260px !important;float:left}
 @media(min-width:380px){.featured-video iframe{height:400px !important}
 }@media(min-width:820px){.featured-video iframe{height:500px !important}

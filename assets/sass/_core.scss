@@ -889,6 +889,9 @@ body.subpage .main-navigation {
 }
 .featured-video {
 	margin-top: 50px;
+	@include tab {
+		margin-top: 80px;
+	}
 	.embedvideo {
 		max-width: 900px;
 		width: 100%;

@@ -25,7 +25,7 @@ get_header(); ?>
 					?>
 
 					<?php if( $video_type=='embed' ) { ?>
-						<?php if ($video_thumbnail && $video_embed) { ?>
+						<?php if ($video_embed) { ?>
 						<div class="featured-video">
 							<div class="embedvideo cf"><?php echo $video_embed; ?></div>
 						</div>

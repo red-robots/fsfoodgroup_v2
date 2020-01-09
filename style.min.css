@@ -868,7 +868,19 @@ body.subpage .main-navigation ul.menu>li:hover>a{color:rgba(255,255,255,0.35) !i
 @media(min-width:380px){.section.team-info .bio{margin-bottom:30px}
 }.section.team-info .more a{display:inline-block;text-decoration:none;font-size:14px;line-height:1.1;border:1px solid #FFF;padding:6px 20px;color:#FFF}
 .section.team-info .more a:hover{background:#000}
-.pagination{margin-top:15px;margin-left:-2px}
+.single-team .site-main{padding-top:100px;padding-bottom:100px}
+.single-team .photo{width:100%;float:left;margin-bottom:20px;position:relative}
+@media(min-width:380px){.single-team .photo{width:28%;float:left}
+}@media(min-width:820px){.single-team .photo{width:30%}
+}.single-team .photo img{width:100%;height:auto}
+.single-team .photo.nophoto{background:#eaeaea}
+.single-team .photo.nophoto:before{content:"Photo Coming Soon";display:block;width:100%;text-align:center;font-size:16px;line-height:1.1;color:#b5b5b5;position:absolute;top:50%;left:0;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+@media(min-width:380px){.single-team .photo.nophoto:before{font-size:2vw}
+}@media(min-width:820px){.single-team .photo.nophoto:before{font-size:18px}
+}.single-team .entry-content{width:100%;float:left}
+@media(min-width:380px){.single-team .entry-content{width:67%;float:right}
+}@media(min-width:820px){.single-team .entry-content{width:66%}
+}.pagination{margin-top:15px;margin-left:-2px}
 .pagination a,.pagination span{display:inline-block;text-decoration:none;padding:8px 10px 6px;font-size:15px;line-height:1;margin:2px}
 .pagination span{background:#000;color:#FFF}
 .pagination a{color:#000;background:#dadada}

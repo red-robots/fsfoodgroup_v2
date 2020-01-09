@@ -1133,7 +1133,62 @@ body.subpage .main-navigation {
 		}
 	}
 }
-
+.single-team {
+	.site-main {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	.photo {
+		width: 100%;
+		float: left;
+		margin-bottom: 20px;
+		position: relative;
+		@include xs {
+			width: 28%;
+			float: left;
+		}
+		@include tab {
+			width: 30%;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&.nophoto {
+			background: #eaeaea;
+			&:before {
+				content:"Photo Coming Soon";
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-size: 16px;
+				line-height: 1.1;
+				color: #b5b5b5;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				@include xs {
+					font-size: 2vw;
+				}
+				@include tab {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.entry-content {
+		width: 100%;
+		float: left;
+		@include xs {
+			width: 67%;
+			float: right;
+		}
+		@include tab {
+			width: 66%;
+		}
+	}
+}
 
 /* Pagination */
 .pagination {

@@ -39,7 +39,7 @@ get_header(); ?>
 					
 					<div class="featureImgVid text-center">
 						<?php if($is_video && $embed) { ?>
-							<div class="embedvideo"><?php echo $embed; ?></div>
+							<div class="embedvideo cf"><?php echo $embed; ?></div>
 						<?php } else { ?>
 							<?php if ($thumbnail) { ?>
 								<img src="<?php echo $thumbnail ?>" alt="<?php echo $altImage ?>" />

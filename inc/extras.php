@@ -164,3 +164,34 @@ function get_social_links() {
     return $social;
 }
 
+function insert_teams($isInsert=false) {
+    global $wpdb;
+    $teams[] = array("Frank Scibelli","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in est velit. Quisque auctor velit ante, vel auctor nisi porta eu. Aliquam rhoncus quam mauris, ac lobortis libero vehicula non. Praesent vitae nisi urna. Morbi laoreet nunc lorem, eget viverra mauris pretium eu.");
+    $teams[] = array("Eric Fenner","Pellentesque sed lacinia dolor. Nam eu purus at magna vehicula pretium. Aenean posuere ultricies porttitor. Nullam nulla orci, auctor ut posuere a, interdum ut justo. Praesent lacinia, magna id elementum consequat, mi diam dapibus lectus, ac egestas leo tortor non nisi.");
+    $teams[] = array("Stephanie Kalish","Praesent vulputate quam nisi, ac tempus turpis volutpat id. Pellentesque placerat dapibus diam. Aliquam nec tincidunt urna. Nam maximus purus non pellentesque facilisis. Proin sit amet diam odio. Proin eget lobortis enim. Nullam placerat vestibulum ante ut ultrices.");
+    $teams[] = array("Taryn Fenner","Nulla mattis libero odio, bibendum porttitor arcu dictum sed. Donec placerat velit mi, non blandit orci elementum vitae. Suspendisse ullamcorper a lacus id lobortis. Curabitur mi dolor, aliquet id tellus at, molestie iaculis lorem. Morbi elementum tempor eleifend.");
+
+    $ids = array();
+    if( $isInsert ) {
+        foreach($teams as $data) {
+            $post_title = $data[0];
+            $post_content = $data[1];
+            $post_status = 'publish';
+            $post_type = 'teams';
+            $args = array(
+                'post_title'=>$data[0],
+                'post_content'=>$data[1],
+                'post_status'=>'publish',
+                'post_type'=>'teams'
+            );
+
+            wp_insert_post( $args );
+            $lastid = $wpdb->insert_id;
+            $ids[] = $lastid;
+        }
+    }
+    if( $ids ) {
+        echo "POST INSERTED!";
+    }
+}
+

@@ -112,4 +112,16 @@ jQuery(document).ready(function ($) {
 		$('.main-navigation').removeClass("animated fadeIn open");
 	});
 
+	$(document).on("click","#VidPlay",function(e){
+		e.preventDefault();
+		$('#htmlVideo').trigger("click");
+		$(this).fadeToggle("fast");
+		$(".video-thumb").fadeToggle("fast");
+		$(".videomp4").toggleClass("pause");
+	});
+
+	$('#htmlVideo').click(function(e) {
+        this.paused ? this.play() : this.pause();
+    });
+
 });// END #####################################    END

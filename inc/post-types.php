@@ -164,6 +164,14 @@ function set_custom_cpt_columns($columns) {
         $columns['featimage'] = __( 'Image', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
     }
+
+    if($post_type=='teams') {
+        unset( $columns['date'] );
+        unset( $columns['title'] );
+        $columns['title'] = __( 'Name', 'bellaworks' );
+        $columns['photo'] = __( 'Photo', 'bellaworks' );
+        $columns['date'] = __( 'Date', 'bellaworks' );
+    }
     
     return $columns;
 }
@@ -195,7 +203,24 @@ function custom_post_column( $column, $post_id ) {
                 $img_src = ($img) ? $img['sizes']['thumbnail'] : '';
                 $the_photo = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
                 if($img_src) {
-                   $the_photo .= '<img src="'.$img_src.'" alt="" style="width:100%;height:auto" />';
+                   $the_photo .= '<span style="background:url('.$img_src.') center no-repeat;background-size:cover;display:block;width:100%;height:100%;"></span>';
+                } else {
+                    $the_photo .= '<i class="dashicons dashicons-businessman" style="font-size:33px;position:relative;top:8px;left:-6px;opacity:0.3;"></i>';
+                }
+                $the_photo .= '</span>';
+                echo $the_photo;
+                break;
+        }
+    }
+
+    if($post_type=='teams') {
+        switch ( $column ) {
+            case 'photo' :
+                $img = get_field('photo',$post_id);
+                $img_src = ($img) ? $img['sizes']['medium'] : '';
+                $the_photo = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
+                if($img_src) {
+                   $the_photo .= '<span style="background:url('.$img_src.') center no-repeat;background-size:cover;display:block;width:100%;height:100%;"></span>';
                 } else {
                     $the_photo .= '<i class="dashicons dashicons-businessman" style="font-size:33px;position:relative;top:8px;left:-6px;opacity:0.3;"></i>';
                 }

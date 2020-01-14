@@ -1223,6 +1223,209 @@ body.single-post {
 	}
 }
 
+/* Sitemap */
+.sitemapMenu {
+	text-align: center;
+	max-width: 700px;
+	width: 100%;
+	padding-bottom: 60px;
+	.sitemapnav {
+		// max-width: 700px;
+		width: 100%;
+		margin: 0 auto;
+		text-align: left;
+	}
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		li {
+			position: relative;
+		}
+	}
+	ul > li {
+		padding-left: 12px;
+		margin-bottom: 2px;
+		> a:before {
+			content:"";
+			display: block;
+			width: 5px;
+			height: 5px;
+			background: $primary;
+			position: absolute;
+			top: 7px;
+			left: 0;
+			transition: all ease-out .3s;
+		}
+		ul {
+			padding-left: 10px;
+		}
+		ul li {
+			padding-left: 10px;
+			> a:before {
+				background: transparent;
+				border: 1px solid $primary;
+				border-radius: 100%;
+				width: 3px;
+				height: 3px;
+				top: 8px;
+				transition: all ease-out .3s;
+			}
+		}
+		ul li:hover > a:before {
+			border-color: $primary;
+			background: transparent;
+		}
+	}
+	ul.menu > li > a:hover:before {
+		background: tint($primary,40%);
+	}
+	ul.menu {		
+		@include tab {
+			column-count: 2;
+		}
+		ul a {
+			padding: 0 0 0 2px;
+		}
+	}
+	ul.menu > li {
+		width: 100%;
+		@include tab {
+			margin-left: 3%;
+			width: 230px;
+
+		}
+	}
+	a {
+		color: $primary;
+		text-decoration: none;
+		display: inline-block;
+		&:hover {
+			color: tint($primary,40%);
+		}
+	}
+}
+
+.careers .section.fsgroup {
+	.flexwrap {
+		margin:0 -10px;
+		@include flexgroup();
+	}
+	.fsgroup-item {
+		width: 50%;
+		padding: 10px;
+	}
+	&.columns3 .fsgroup-item {
+		@include tab {
+			width: 33.3%;
+		}
+	}
+	&.columns4 .fsgroup-item {
+		@include tab {
+			width: 25%;
+		}
+	}
+	&.columns5 .fsgroup-item {
+		@include tab {
+			width: 33.3%;
+		}
+		@include mid {
+			width: 20%;
+		}
+	}
+	&.columns6 .fsgroup-item {
+		@include tab {
+			width: 33.3%;
+		}
+		@include mid {
+			width: 16.666%;
+		}
+	}
+	@media screen and (min-width: $xswidth - 1px) and (max-width: $tabwidth) {
+		.fsgroup-item {
+			width: 33.3%;
+		}
+	}
+	@media screen and (max-width: $xswidth) {
+		.fsgroup-item {
+			width: 100%!important;
+		}
+	}
+	img.placeholder {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+	.wrap {
+		display: block;
+		width: 100%;
+		float: left;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: all ease-in-out .3s;
+		&:before {
+			content:"";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,.55);
+		}
+		&:after {
+			display: none;
+		}
+	}
+	.fslogo {
+		height: 30vw;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		@include xs {
+			height: 15vw;
+		}
+		@include tab {
+			height: 10vw;
+		}
+		@include mid {
+			height: 6.5vw;
+		}
+		@media screen and (min-width: $xswidth - 1px) and (max-width: $tabwidth) {
+			height: 12vw;
+		}
+	}
+	.fsimage {
+		overflow: hidden;
+		margin: 0 0;
+	}
+	.fsimage:hover {
+		a:before,a:after {
+			display: none;
+		}
+		.wrap {
+			&:before {
+				background: rgba(0,0,0,.85);
+			}
+		}
+	}
+}
+
+
+/* Page 404 */
+.page404 {
+	.site-main {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	.text {
+		p {
+			margin-top: 0;
+		}
+	}
+}
+
 /* Footer */
 .site-footer {
 	width: 100%;

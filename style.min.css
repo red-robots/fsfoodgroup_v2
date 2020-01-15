@@ -749,7 +749,7 @@ body.subpage.open-mobile-menu .menu-toggle.menutoggle1{display:none}
 body.subpage .main-navigation ul.menu a{color:#FFF !important}
 body.subpage .main-navigation ul.menu>li:hover>a{color:rgba(255,255,255,0.35) !important}
 }.banner{width:100%;float:left;background:#000;position:relative;z-index:20}
-.banner:before,.banner:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0}
+.banner:before,.banner:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;opacity:.8}
 .banner:before{z-index:5;background:-webkit-linear-gradient(top,rgba(0,0,0,0.65) 50%,transparent 100%);background:linear-gradient(to bottom,rgba(0,0,0,0.65) 50%,transparent 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000',endColorstr='#00000000',GradientType=0)}
 .banner:after{background:rgba(0,0,0,0.5)}
 .banner img{width:100%;height:auto;float:left}

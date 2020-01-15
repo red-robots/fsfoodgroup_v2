@@ -8,11 +8,14 @@ get_header(); ?>
 	<div id="primary" class="content-area cf default careers">
 		<main id="main" class="site-main cf" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); 
+				$main_content = get_the_content();
+				$main_content = ($main_content) ? email_obfuscator($main_content) : '';
+			?>
 			<section class="maintext">
 				<div class="wrapper text-center">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<div class="entry-content"><?php the_content(); ?></div>
+					<div class="entry-content"><?php echo $main_content; ?></div>
 				</div>
 			</section>
 			<?php endwhile; ?>

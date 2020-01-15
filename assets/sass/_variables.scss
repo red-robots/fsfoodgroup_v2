@@ -12,11 +12,13 @@ $xswidth: 430px;
 $tabwidth: 820px;
 $midwidth: 960px;
 $deskwidth: 1200px;
+$xxlwidth: 1500px;
 
 @mixin xs { @media (min-width: $xswidth) { @content; } }
 @mixin tab { @media (min-width: $tabwidth) { @content; } }
 @mixin mid { @media (min-width: $midwidth) { @content; } }
 @mixin desk {  @media (min-width: $deskwidth) { @content; } }
+@mixin xxl {  @media (min-width: $xxlwidth) { @content; } }
 
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {

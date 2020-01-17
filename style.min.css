@@ -941,13 +941,20 @@ body.subpage .main-navigation ul.menu>li:hover>a{color:rgba(255,255,255,0.35) !i
 @media(min-width:960px){.site-footer .ft-main-logo img{margin:0}
 }.site-footer .col{width:100%}
 .site-footer .col1{text-align:center;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-@media(min-width:960px){.site-footer .col1{text-align:left;width:20%}
-}@media(min-width:960px){.site-footer .col2{width:55%}
+@media(min-width:960px){.site-footer .col1{text-align:left;width:10%}
+}@media(min-width:960px){.site-footer .col2{width:70%}
 }.site-footer .col3{text-align:center;margin-top:20px}
-@media(min-width:960px){.site-footer .col3{margin-top:0;width:25%;text-align:right}
+@media(min-width:960px){.site-footer .col3{margin-top:0;width:20%;text-align:right}
 }.site-footer .fsgrouplogos .flexwrap{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .site-footer .fsgrouplogos .fsgrplogo{padding:0 25px}
-@media(min-width:960px){.site-footer .fsgrouplogos .fsgrplogo{padding:10px 25px}
-}.site-footer .fsgrouplogos .fsgrplogo img{width:60px;height:auto;opacity:.55}
+@media(min-width:960px){.site-footer .fsgrouplogos .fsgrplogo{padding:10px 16px}
+}@media(min-width:1200px){.site-footer .fsgrouplogos .fsgrplogo{padding:10px 25px}
+}@media screen and (max-width:745px){.site-footer .fsgrouplogos .fsgrplogo{padding:10px 15px}
+}@media screen and (max-width:770px){.site-footer .fsgrouplogos .fsgrplogo{width:25%}
+}@media screen and (max-width:380px){.site-footer .fsgrouplogos .fsgrplogo{width:33.33%}
+}@media screen and (max-width:300px){.site-footer .fsgrouplogos .fsgrplogo{width:50%}
+}.site-footer .fsgrouplogos .fsgrplogo img{width:75px;height:auto;opacity:.55}
 @media(min-width:960px){.site-footer .fsgrouplogos .fsgrplogo img{width:auto;height:50px}
+}@media screen and (max-width:770px){.site-footer .fsgrouplogos .fsgrplogo img{width:70%}
+}@media screen and (max-width:670px){.site-footer .fsgrouplogos .fsgrplogo img{width:100%}
 }

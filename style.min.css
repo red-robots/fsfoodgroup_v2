@@ -772,6 +772,8 @@ body.subpage .main-navigation ul.menu>li:hover>a{color:rgba(255,255,255,0.35) !i
 .scrolldown .arrowdown:before,.scrolldown .arrowdown:after{content:"";display:block;width:30px;height:1px;background:#000;position:absolute;top:18px;left:0}
 .scrolldown .arrowdown:before{width:32px;-webkit-transform:translateX(-6px) rotate(45deg);-ms-transform:translateX(-6px) rotate(45deg);transform:translateX(-6px) rotate(45deg)}
 .scrolldown .arrowdown:after{-webkit-transform:translateX(17px) rotate(-45deg);-ms-transform:translateX(17px) rotate(-45deg);transform:translateX(17px) rotate(-45deg)}
+.scrolldown.no-animate{margin-bottom:30px}
+.scrolldown.no-animate .arrowdown{-webkit-animation:none;animation:none;top:-33px}
 @-webkit-keyframes MoveUpDown{0%,100%{bottom:0}
 50%{bottom:15px}
 }@keyframes MoveUpDown{0%,100%{bottom:0}
@@ -931,6 +933,27 @@ body.subpage .main-navigation ul.menu>li:hover>a{color:rgba(255,255,255,0.35) !i
 }.careers .section.fsgroup .fsimage{overflow:hidden;margin:0}
 .careers .section.fsgroup .fsimage:hover a:before,.careers .section.fsgroup .fsimage:hover a:after{display:none}
 .careers .section.fsgroup .fsimage:hover .wrap:before{background:rgba(0,0,0,0.85)}
+.conceptpage .maintext{padding-top:70px;padding-bottom:70px}
+.section.section-concepts{padding-bottom:40px}
+.section.section-concepts .flexwrap{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.section.section-concepts .concept-info{margin-top:50px;margin-bottom:60px}
+@media(min-width:820px){.section.section-concepts .concept-info{margin-top:50px;margin-bottom:50px}
+}.section.section-concepts .concept-info:first-child{margin-top:0}
+.section.section-concepts .concept-image{width:100%;position:relative;margin-bottom:20px}
+@media(min-width:820px){.section.section-concepts .concept-image{width:30%;margin-bottom:0}
+}.section.section-concepts .concept-image .imagediv{width:100%;float:left;background-size:cover;background-color:#CCC;background-position:center;background-repeat:no-repeat;position:relative}
+.section.section-concepts .concept-image .imagediv:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:rgba(0,0,0,0.35);z-index:2}
+.section.section-concepts .concept-image a{display:block;width:100%;position:relative;float:left}
+.section.section-concepts .concept-image img{width:100%;height:auto;float:left;position:relative}
+.section.section-concepts .concept-image img.xfslogo{width:30vw;height:auto;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);z-index:5}
+@media(min-width:820px){.section.section-concepts .concept-image img.xfslogo{width:15vw}
+}@media(min-width:960px){.section.section-concepts .concept-image img.xfslogo{width:10vw}
+}.section.section-concepts .concept-text{width:100%}
+@media(min-width:820px){.section.section-concepts .concept-text{width:70%;padding-left:30px}
+}.section.section-concepts .concept-text h2.title{margin:0 0 20px;font-size:1.3rem;font-weight:600}
+.section.section-concepts .concept-text .text p:first-child{margin-top:0}
+.section.section-concepts .sitelink a{display:inline-block;text-decoration:none;font-size:.85rem;line-height:1.1;color:#333;border:1px solid #000;padding:7px 16px 5px}
+.section.section-concepts .sitelink a:hover{background:#000;color:#FFF}
 .page404 .site-main{padding-top:100px;padding-bottom:100px}
 .page404 .text p{margin-top:0}
 .site-footer{width:100%;float:left;background:#000;color:#FFF;font-size:14px;padding-top:20px;padding-bottom:20px}

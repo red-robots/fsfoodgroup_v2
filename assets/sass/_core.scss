@@ -555,6 +555,13 @@ body.subpage .main-navigation {
 			transform: translateX(17px) rotate(-45deg);
 		}
 	}
+	&.no-animate {
+		margin-bottom: 30px;
+		.arrowdown {
+			animation: none;
+			top: -33px;
+		}
+	}
 }
 @keyframes MoveUpDown {
   0%, 100% {
@@ -1434,7 +1441,117 @@ body.single-post {
 		}
 	}
 }
-
+.conceptpage {
+	.maintext {
+		padding-top: 70px;
+    	padding-bottom: 70px;
+	}
+}
+.section.section-concepts {
+	padding-bottom: 40px;
+	.flexwrap {
+		@include flexgroup();
+	}
+	.concept-info {
+		margin-top: 50px;
+		margin-bottom: 60px;
+		@include tab {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+	}
+	.concept-info:first-child {
+		margin-top: 0;
+	}
+	.concept-image {
+		width: 100%;
+		position: relative;
+		margin-bottom: 20px;
+		@include tab {
+			width: 30%;
+			margin-bottom: 0;
+		}
+		.imagediv {
+			width: 100%;
+			float: left;
+			background-size: cover;
+			background-color: #CCC;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+			&:before {
+				content:"";
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: rgba(0,0,0,.35);
+				z-index: 2;
+			}
+		}
+		a {
+			display: block;
+			width: 100%;
+			position: relative;
+			float: left;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			float: left;
+			position: relative;
+		}
+		img.xfslogo {
+			width: 30vw;
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 5;
+			@include tab {
+				width: 15vw;
+			}
+			@include mid {
+				width: 10vw;
+			}
+		}
+	}
+	.concept-text {
+		width: 100%;
+		@include tab {
+			width: 70%;
+			padding-left: 30px;
+		}
+		h2.title {
+			margin: 0 0 20px;
+			font-size: 1.3rem;
+			font-weight: 600;
+		}
+		.text {
+			p:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	.sitelink {
+		a {
+			display: inline-block;
+			text-decoration: none;
+			font-size: 0.85rem;
+			line-height: 1.1;
+			color: #333;
+			border: 1px solid #000;
+			padding: 7px 16px 5px;
+			&:hover {
+				background: #000;
+				color: #FFF;
+			}
+		}
+	}
+}
 
 /* Page 404 */
 .page404 {

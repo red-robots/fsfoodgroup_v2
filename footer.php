@@ -18,9 +18,17 @@
 					<div class="flexwrap">
 					<?php if ($footer_logos) { ?>
 						<?php foreach ($footer_logos as $f) { 
-							$fsLogo = $f['logo']; ?>
+							$fsLogo = $f['logo']; 
+							$fsLink = $f['link']; 
+							$openLink  = '';
+							$closeLink = '';
+							if($fsLink) {
+								$openLink  = '<a href="'.$fsLink.'" target="_blank">';
+								$closeLink = '</a>';
+							}
+							?>
 							<?php if ($fsLogo) { ?>
-								<span class="fsgrplogo"><img src="<?php echo $fsLogo['url'] ?>" alt="<?php echo $fsLogo['title'] ?>"></span>
+								<span class="fsgrplogo"><?php echo $openLink; ?><img src="<?php echo $fsLogo['url'] ?>" alt="<?php echo $fsLogo['title'] ?>"><?php echo $closeLink; ?></span>
 							<?php } ?>
 							
 						<?php } ?>

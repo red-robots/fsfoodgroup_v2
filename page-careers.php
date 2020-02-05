@@ -9,29 +9,43 @@ get_header(); ?>
 		<main id="main" class="site-main cf" role="main">
 
 			<?php while ( have_posts() ) : the_post(); 
-				$main_content = get_the_content();
-				$main_content = ($main_content) ? email_obfuscator($main_content) : '';
-				$mainStrings = '';
-				ob_start();
-				echo $main_content;
-				$mainStrings = ob_get_contents();
-				ob_end_clean();
-				$hasH1Tag = false;
-				if(strpos($mainStrings, '<h1>') !== false){
-				    $hasH1Tag = true;
-				} else{
-				    $hasH1Tag = false;
-				}
-			?>
-			<section class="maintext">
-				<div class="wrapper text-center">
-					<?php if ($hasH1Tag==false) { ?>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<?php } ?>
-					<div class="entry-content"><?php echo $main_content; ?></div>
-				</div>
-			</section>
+					$main_content = get_the_content();
+					$main_content = ($main_content) ? email_obfuscator($main_content) : '';
+					$mainStrings = '';
+					ob_start();
+					echo $main_content;
+					$mainStrings = ob_get_contents();
+					ob_end_clean();
+					$hasH1Tag = false;
+					if(strpos($mainStrings, '<h1>') !== false){
+					    $hasH1Tag = true;
+					} else{
+					    $hasH1Tag = false;
+					}
+				?>
+				<section class="maintext">
+					<div class="wrapper text-center">
+						<?php if ($hasH1Tag==false) { ?>
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<?php } ?>
+						<div class="entry-content"><?php echo $main_content; ?></div>
+					</div>
+				</section>
+
+
+				<?php $careers_embed = get_field("careers_embed"); ?>
+				<?php if ($careers_embed) { ?>
+				<section class="section-careers-embed cf">
+					<div class="wrapper">
+						<?php echo $careers_embed; ?>
+					</div>
+				</section>
+				<?php } ?>
+
 			<?php endwhile; ?>
+
+
+
 
 			<?php  
 			$post_type = 'restaurants';
@@ -69,6 +83,8 @@ get_header(); ?>
 			else if($countItems>=6) {
 				$colClass = 'columns6';
 			}
+
+			$fsgroup = FALSE; /* To HIDE temporarily */
 			if( $fsgroup ) { ?>
 			<section id="concepts" class="section fsgroup cf <?php echo $colClass ?>">
 				<div class="wrapper cf">

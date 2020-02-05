@@ -1565,6 +1565,20 @@ body.single-post {
 		}
 	}
 }
+.section-careers-embed {
+	.wrapper {
+		@include tab {
+			margin-top: -80px;
+		}
+	}
+	iframe {
+		width: 100%!important;
+		height: 100%!important;
+		border: none;
+		margin: 0 0;
+		padding: 0 0;
+	}
+}
 
 /* Footer */
 .site-footer {

@@ -79,7 +79,12 @@ jQuery(document).ready(function ($) {
 		height: '80%'
 	});
 	
-
+	$('.grid').masonry({
+	  // options
+	  itemSelector: '.grid-item',
+	  columnWidth: 400,
+	  gutter: 20
+	});
 	/*
 	*
 	*	Wow Animation

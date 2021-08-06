@@ -17,6 +17,12 @@ function bellaworks_scripts() {
 			array(), '20120206', 
 			true 
 		);
+	wp_enqueue_script( 
+			'bellaworks-masonary', 
+			get_template_directory_uri() . '/assets/js/vendors/masonary.js', 
+			array(), '20120206', 
+			true 
+		);
 
 	wp_enqueue_script( 
 			'bellaworks-custom', 

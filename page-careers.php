@@ -3,7 +3,20 @@
  * Template Name: Careers
 */
 
-get_header(); ?>
+get_header(); 
+
+function howmany( $num ) {
+	if( $num == 3 ) { $tClass = 'three'; }
+	if( $num == 4 ) { $tClass = 'four'; }
+	if( $num == 5 ) { $tClass = 'five'; }
+	if( $num == 6 ) { $tClass = 'six'; }
+	if( $num == 7 ) { $tClass = 'seven'; }
+	if( $num == 8 ) { $tClass = 'eight'; }
+	if( $num == 9 ) { $tClass = 'nine'; }
+	return $tClass;
+}
+
+?>
 
 	<div id="primary" class="content-area cf default careers">
 		<main id="main" class="site-main cf" role="main">
@@ -23,14 +36,100 @@ get_header(); ?>
 					    $hasH1Tag = false;
 					}
 				?>
+				
+				<?php 
+				$footer_logos = get_field("footer_logos","option"); 
+				 if ($footer_logos) { ?>
+					<section class="places">
+						<div class="flex">
+							<?php foreach ($footer_logos as $f) { 
+								$fsLogo = $f['logo']; 
+								$fsLink = $f['link']; 
+								$openLink  = '';
+								$closeLink = '';
+								if($fsLink) {
+									$openLink  = '<a href="'.$fsLink.'" target="_blank">';
+									$closeLink = '</a>';
+								}
+								?>
+								<?php if ($fsLogo) { ?>
+									<div class="place-l">
+										<?php echo $openLink; ?>
+											<img src="<?php echo $fsLogo['url'] ?>" alt="<?php echo $fsLogo['title'] ?>">
+										<?php echo $closeLink; ?>
+									</div>
+								<?php } ?>
+								
+							<?php } ?>
+							</div>
+						</section>
+					<?php } ?>
+
+
 				<section class="maintext">
 					<div class="wrapper text-center">
-						<?php if ($hasH1Tag==false) { ?>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<?php } ?>
-						<div class="entry-content"><?php echo $main_content; ?></div>
+						<?php //if ($hasH1Tag==false) { ?>
+						<h1 class="entry-title careers"><?php the_title(); ?></h1>
+						<?php //} ?>
+						<div class="entry-content careers"><?php echo $main_content; ?></div>
 					</div>
 				</section>
+
+				<?php 
+				$galOne = get_field('row_1_gallery'); 
+				$num = count( $galOne );
+				$tClass = howmany( $num );
+				// echo $num;
+				?>
+					<section class="car-gallery">
+						<?php foreach( $galOne as $gI ) { 
+								// echo '<pre>';
+								// print_r($gI);
+								// echo '</pre>';
+							?>
+							<div class="galwrap <?php echo $tClass; ?>">
+								<img src="<?php echo $gI['sizes']['medium']; ?>">
+							</div>
+							
+						<?php } ?>
+					</section>
+
+				<?php if( have_rows( 'benefits' ) ) : ?>
+					<section class="benefits">
+						<h2>Employment Benefits</h2>
+						<div class="flex gridz">
+							<?php while( have_rows( 'benefits' ) ) : the_row(); 
+									$bt = get_sub_field('benefit_header');
+									$bb = get_sub_field('benefit');
+								?>
+							<div class="benefit grid-itemz">
+								<?php if( $bt ) { echo '<h3>'.$bt.'</h3>';} ?>
+								<?php if( $bb ){ echo $bb; } ?>
+							</div>
+						<?php endwhile; ?>
+					</div>
+					</section>
+				<?php endif; ?>
+
+
+				<?php 
+				$galOne = get_field('row_2_gallery'); 
+				$num = count( $galOne );
+				$tClass = howmany( $num );
+				// echo $num;
+				?>
+					<section class="car-gallery">
+						<?php foreach( $galOne as $gI ) { 
+								// echo '<pre>';
+								// print_r($gI);
+								// echo '</pre>';
+							?>
+							<div class="galwrap <?php echo $tClass; ?>">
+								<img src="<?php echo $gI['sizes']['medium']; ?>">
+							</div>
+							
+						<?php } ?>
+					</section>
 
 
 				<?php $careers_embed = get_field("careers_embed"); ?>

@@ -442,6 +442,11 @@ section.places .flex .place-l img{max-width:100%}
 section.places .flex .place-l a{display:block}
 .grid-item{width:30%}
 .grid-item--width2{width:600px}
+#concepts .details{width:100%;float:left;margin-bottom:20px}
+#concepts .details .detail{width:auto;display:inline-block;margin-right:20px;color:rgba(0,0,0,0.5);font-weight:bold}
+.car-btn{width:auto;display:inline-block;margin:20px auto}
+.car-btn a{display:block;padding:15px 25px;background-color:#b45110;color:#fff;text-transform:uppercase;text-decoration:none;-webkit-transform:scale(1);transform:scale(1)}
+.car-btn a:hover{-webkit-transform:scale(1.1);transform:scale(1.1)}
 @media screen and (min-width:429px) and (max-width:820px){.careers .section.fsgroup .fsgroup-item{width:33.3%}
 .careers .section.fsgroup .fslogo{height:12vw}
 }@media(min-width:430px){.singlepage .article .featureImgVid iframe{height:400px !important}

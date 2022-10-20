@@ -1792,3 +1792,34 @@ section.places {
 }
 .grid-item { width: 30%; }
 .grid-item--width2 { width: 600px; }
+#concepts {
+	.details {
+		width: 100%;
+		float: left;
+		margin-bottom: 20px;
+		.detail {
+			width: auto;
+			display: inline-block;
+			margin-right: 20px;
+			color: rgba(#000, .5);
+			font-weight: bold;
+		}
+	}
+}
+.car-btn {
+	width: auto;
+	display: inline-block;
+	margin: 20px auto;
+	a {
+		display: block;
+		padding: 15px 25px;
+		background-color: #b45110;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		transform: scale(1);
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

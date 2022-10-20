@@ -35,6 +35,12 @@ function howmany( $num ) {
 					} else{
 					    $hasH1Tag = false;
 					}
+					$cBtn = get_field('turn_on');
+					$link = get_field('link');
+					$btn_text = get_field('btn_text');
+					// echo '<pre>';
+					// print_r($link);
+					// echo '</pre>';
 				?>
 				
 				<?php 
@@ -71,6 +77,13 @@ function howmany( $num ) {
 						<?php //if ($hasH1Tag==false) { ?>
 						<h1 class="entry-title careers"><?php the_title(); ?></h1>
 						<?php //} ?>
+						<?php if( $cBtn == 'on' ) { ?>
+							<div class="car-btn">
+								<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target'] ?>">
+									<?php echo $link['title']; ?>
+								</a>
+							</div>
+						<?php } ?>
 						<div class="entry-content careers"><?php echo $main_content; ?></div>
 					</div>
 				</section>

@@ -1454,6 +1454,16 @@ body.single-post {
 }
 .section.section-concepts {
 	padding-bottom: 40px;
+	&.private-dining {
+		.concept-image {
+			.imagediv {
+				max-height: 225px;
+				&:before {
+					height: 0;
+				}
+			}
+	}
+	}
 	.flexwrap {
 		@include flexgroup();
 	}

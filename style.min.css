@@ -392,6 +392,8 @@ body.single-post .article .wrapper{max-width:1000px}
 .careers .section.fsgroup .fsimage:hover .wrap:before{background:rgba(0,0,0,0.85)}
 .conceptpage .maintext{padding-top:70px;padding-bottom:70px}
 .section.section-concepts{padding-bottom:40px}
+.section.section-concepts.private-dining .concept-image .imagediv{max-height:225px}
+.section.section-concepts.private-dining .concept-image .imagediv:before{height:0}
 .section.section-concepts .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .section.section-concepts .concept-info{margin-top:50px;margin-bottom:60px}
 .section.section-concepts .concept-info:first-child{margin-top:0}

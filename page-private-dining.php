@@ -28,7 +28,7 @@ get_header(); ?>
 			// $concepts = new WP_Query($args);
 			$placeholder = get_bloginfo("template_url") . "/images/portrait.png";
 			if ( have_rows('dining') ) {  ?>
-			<section class="section section-concepts cf">
+			<section class="section section-concepts private-dining cf">
 				<div id="concepts" class="wrapper">
 
 					<?php while ( have_rows('dining') ) : the_row(); 

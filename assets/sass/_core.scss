@@ -108,7 +108,7 @@ body.home .site-header {
 	position: absolute;
 }
 body.subpage .site-header {
-	background: #000;
+	background: $nblue;
 	float: left;
 	height: 65px;
 	@include tab {
@@ -483,6 +483,23 @@ body.subpage .main-navigation {
 		width: 100%;
 		height: auto;
 		float: left;
+	}
+	.banner-wrap {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		color: #fff;
+		h2 {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-family: 'Poppins', sans-serif;
+		}
 	}
 }
 #content {
@@ -1830,6 +1847,40 @@ section.places {
 		transform: scale(1);
 		&:hover {
 			transform: scale(1.1);
+		}
+	}
+}
+section.new-dining {
+	
+	@include mid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-contents: stretch;
+	}
+	.d-links {
+		background-color: $nblue;
+		width: 90%;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		align-contents: center;
+		margin: 0 auto 20px auto;
+		justify-content: center;
+		@include mid {
+			width: 28%;
+			margin-bottom: 40px;
+		}
+		&:hover {
+			img {
+				transform: scale(1);
+			}
+		}
+		img {
+			width: 100%;
+			transform: scale(.9);
+			transition: all ease .3s;
 		}
 	}
 }

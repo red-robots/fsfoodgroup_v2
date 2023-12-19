@@ -22,6 +22,34 @@ get_header(); ?>
 			</div>
 
 
+			<?php 
+
+				$d_links = get_field('d_links');
+
+				if( $d_links ) {
+
+					// echo '<pre>';
+					// print_r($d_links);
+					// echo '</pre>';
+			 ?>
+
+
+			 	<section class="new-dining">
+			 		<?php foreach( $d_links as $dl ) { ?>
+			 			<div class="d-links">
+			 				<a href="<?php echo $dl['link']['url']; ?>">
+			 					<div class="img">
+			 						<img src="<?php echo $dl['logo']['url']; ?>" alt="<?php echo $dl['logo']['alt']; ?>">
+			 					</div>
+			 				</a>
+			 			</div>
+			 		<?php } ?>
+			 	</section>
+
+
+			<?php } ?>
+
+
 			<?php  
 			/* CONCEPTS */
 			//

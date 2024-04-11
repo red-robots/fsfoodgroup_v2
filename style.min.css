@@ -250,8 +250,11 @@ body.subpage .site-header{background:#33525f;float:left;height:65px}
 .main-navigation ul li{position:relative}
 .main-navigation .main-menu-wrap{text-align:center}
 .main-navigation ul.menu{display:block;text-align:left}
-.main-navigation ul.menu>li{display:block;float:left}
+.main-navigation ul.menu>li{display:block;float:left;width:auto;position:relative}
 .main-navigation ul.menu a{text-decoration:none;display:inline-block;color:#FFF;font-size:16px;line-height:1.2}
+.main-navigation ul.sub-menu{overflow:hidden;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin-bottom:20px;-webkit-transition:all ease .4s;transition:all ease .4s;margin:0}
+.main-navigation ul.sub-menu li{display:block;width:100%;min-width:200px;margin:0}
+.main-navigation ul.sub-menu li a{padding:10px 25px;font-size:18px}
 body.subpage .main-navigation{margin-top:0;padding-top:20px;padding-bottom:12px}
 .menu-toggle,.mobileMenu,.closemenubtn{display:none}
 .banner{width:100%;float:left;background:#000;position:relative;z-index:20}
@@ -475,8 +478,12 @@ section.new-dining .d-links img{width:100%;-webkit-transform:scale(0.9);transfor
 .main-navigation{margin-top:20px}
 .main-navigation ul.menu{display:inline-block}
 .main-navigation ul.menu>li{display:inline-block;margin:2px 3px}
+.main-navigation ul.menu>li:hover ul.sub-menu{height:auto;padding:20px 0;background-color:#000}
 .main-navigation ul.menu>li>a{padding:7px 20px 6px;border:1px solid rgba(255,255,255,0)}
 .main-navigation ul.menu>li:hover>a{border-color:rgba(255,255,255,0.75)}
+.main-navigation ul.sub-menu{height:0;position:absolute;top:100%;min-width:250px}
+.main-navigation ul.sub-menu li{text-align:left}
+.main-navigation ul.sub-menu li a{font-size:16px}
 .fsgroup .fslogo{height:8vw}
 .default .site-main{min-height:35em}
 .maintext{padding-top:90px;padding-bottom:90px}

@@ -184,9 +184,18 @@ body.subpage .site-header {
 	ul.menu > li {
 		display: block;
 		float: left;
+		width: auto;
+		position: relative;
 		@include tab {
 			display: inline-block;
 			margin:2px 3px;
+			&:hover {
+				ul.sub-menu {
+					height: auto;
+					padding: 20px 0;
+					background-color: #000;
+				}
+			}
 		}
 	}
 	ul.menu a {
@@ -205,6 +214,42 @@ body.subpage .site-header {
 	ul.menu > li:hover > a {
 		@include tab {
 			border-color: rgba(255,255,255,.75);
+		}
+	}
+	ul.sub-menu {
+		
+		overflow: hidden;
+		// width: 100%;
+		flex-direction: column;
+		margin-bottom: 20px;
+		transition: all ease .4s;
+		margin: 0;
+		@include tab {
+			height: 0;
+			// width: auto;
+			position: absolute;
+			top: 100%;
+			min-width: 250px;
+		}
+		// -webkit-box-shadow: 0px 2px 28px 6px rgba(255,255,255,0.96); 
+		// box-shadow: 0px 2px 28px 6px rgba(255,255,255,0.96);
+		li {
+			display: block;
+			width: 100%;
+			min-width: 200px;
+			margin: 0;
+			
+			@include tab {
+				text-align: left;
+			}
+			a {
+				padding: 10px 25px;
+				font-size: 18px;
+
+				@include tab { 
+					font-size: 16px;
+				}
+			}
 		}
 	}
 }

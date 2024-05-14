@@ -74,8 +74,31 @@ function howmany( $num ) {
 
 				<section class="maintext">
 					<div class="wrapper text-center">
-						<?php //if ($hasH1Tag==false) { ?>
 						<h1 class="entry-title careers"><?php the_title(); ?></h1>
+					</div>
+					<?php 
+							$cLinks = get_field('work_links');
+							if( $cLinks ) {
+							// echo '<pre>';
+							// print_r($cLinks);
+							// echo '</pre>';
+							echo '<div class="rest-cars text-center">';
+							foreach( $cLinks as $r ) {
+						 ?>
+						 	<div class="rest-block">
+						 		<h2><?php echo $r['restaurant']; ?></h2>
+						 		<div class="car-btn">
+									<a href="<?php echo $r['work_link']['url']; ?>" target="_blank">
+										<?php echo $r['work_link']['title']; ?>
+									</a>
+								</div>
+						 	</div>
+						<?php }
+						echo '</div>';
+						 } ?>
+					<div class="wrapper text-center">
+						<?php //if ($hasH1Tag==false) { ?>
+						
 						<?php //} ?>
 						<?php if( $cBtn == 'on' ) { ?>
 							<div class="car-btn">
@@ -84,6 +107,7 @@ function howmany( $num ) {
 								</a>
 							</div>
 						<?php } ?>
+						
 						<div class="entry-content careers"><?php echo $main_content; ?></div>
 					</div>
 				</section>

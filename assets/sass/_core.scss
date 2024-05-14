@@ -1929,3 +1929,19 @@ section.new-dining {
 		}
 	}
 }
+.rest-cars {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	.rest-block {
+		width: 300px;
+		margin: 10px;
+		h2 {
+
+		}
+	}
+}

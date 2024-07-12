@@ -13,6 +13,13 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
+
+function my_acf_init() {
+    acf_update_setting('google_api_key', 'AIzaSyDmgUGFg14uJNzb4dk3V4tTIbsw2qsa7lQ');
+}
+add_action('acf/init', 'my_acf_init');
+
+
 function bellaworks_body_classes( $classes ) {
     // Adds a class of group-blog to blogs with more than 1 published author.
     if ( is_multi_author() ) {

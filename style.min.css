@@ -459,6 +459,40 @@ section.new-dining .d-links:hover img{-webkit-transform:scale(1);transform:scale
 section.new-dining .d-links img{width:100%;-webkit-transform:scale(0.9);transform:scale(0.9);-webkit-transition:all ease .3s;transition:all ease .3s}
 .rest-cars{width:100%;max-width:1200px;margin:0 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:distribute;justify-content:space-around}
 .rest-cars .rest-block{width:300px;margin:10px}
+section.restaurants{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}
+section.restaurants .restaurant{width:100%;border:5px solid #fff}
+section.restaurants .restaurant li{position:relative}
+section.restaurants .restaurant .overlay{width:100%;height:100%;position:absolute;background-color:rgba(51,82,95,0.7);z-index:40}
+section.restaurants .restaurant .info{width:100%;height:100%;position:absolute;top:0;left:0;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;z-index:50;color:#fff}
+section.restaurants .restaurant .info .r-logo{max-width:250px;margin:0 auto}
+section.restaurants .restaurant .info .r-logo img{width:100%}
+section.restaurants .restaurant .info h3{text-transform:uppercase}
+section.restaurants .restaurant .info .learn{width:auto}
+section.restaurants .restaurant .info .learn span{border-bottom:2px solid #fff}
+section.restaurants .restaurant .flexslider{margin-bottom:0}
+section.restaurants .restaurant .flex-control-nav{bottom:20px}
+article.locations{width:100%;float:left;background-color:#33525f;color:#fff}
+article.locations .location-logo{width:250px;margin:20px auto 50px auto}
+article.locations .location-logo img{width:100%}
+article.locations .address{width:100%;text-align:center}
+section.location-intro{width:100%;float:left}
+section.location-intro .wrap{max-width:750px;margin:0 auto;padding:60px 0}
+section.spaces{width:100%}
+section.spaces .spaces-info{width:100%;padding:20px 0;text-align:center;color:#33525f}
+section.spaces .flex{width:100%}
+section.spaces .space{width:100%;position:relative;cursor:pointer}
+section.spaces .space:hover .details{opacity:1}
+section.spaces .space .image{width:100%;position:relative;z-index:10}
+section.spaces .space .image img{width:100%}
+section.spaces .space .details{width:100%;height:100%;position:absolute;top:0;bottom:0;z-index:20;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:#33525f;color:#fff;text-align:center;opacity:0;-webkit-transition:all ease .3s;transition:all ease .3s}
+section.spaces .space .details .desc{padding:20px}
+section.map{width:100%;position:relative}
+section.map .acf-map{width:100%;height:400px;border:#ccc solid 1px;margin:20px 0}
+section.map .acf-map img{max-width:inherit !important}
+section.map .links{width:300px;position:absolute;left:0;top:0;padding:30px;background-color:#33525f;color:#fff;text-align:center}
+section.map .links .addy{width:100%;margin-bottom:20px}
+section.map .links .btn{width:90%;display:inline-block;margin-bottom:15px}
+section.map .links .btn a{display:block;padding:15px 25px;text-decoration:none;color:#33525f;background-color:#fff}
 @media screen and (min-width:429px) and (max-width:820px){.careers .section.fsgroup .fsgroup-item{width:33.3%}
 .careers .section.fsgroup .fslogo{height:12vw}
 }@media(min-width:430px){.singlepage .article .featureImgVid iframe{height:400px !important}
@@ -515,6 +549,8 @@ section.new-dining .d-links img{width:100%;-webkit-transform:scale(0.9);transfor
 .section.section-concepts .concept-image img.xfslogo{width:15vw}
 .section.section-concepts .concept-text{width:70%;padding-left:30px}
 .section-careers-embed .wrapper{margin-top:-80px}
+section.restaurants .restaurant{width:50%}
+section.restaurants .restaurant:nth-child(1){width:100%}
 }@media(min-width:960px){.section.row1 .textwrap{max-width:1100px;width:100%;margin:0 auto}
 .singlepage .article .featureImgVid iframe{height:580px !important}
 .section.press-articles .news-item{padding:15px;width:33.3%}
@@ -534,6 +570,8 @@ section.places .flex{-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:cent
 section.places .flex .place-l{width:10%;margin:0 20px}
 section.new-dining{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:distribute;justify-content:space-around;align-contents:stretch}
 section.new-dining .d-links{width:28%;margin-bottom:40px}
+section.spaces .flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;max-width:900px;margin:0 auto}
+section.spaces .space{width:auto}
 }@media(min-width:1200px){.careers .section.fsgroup .fslogo{height:6vw}
 .site-footer .fsgrouplogos .fsgrplogo{padding:10px 25px}
 section.benefits .benefit{-ms-flex-preferred-size:22%;flex-basis:22%}

@@ -38,7 +38,7 @@ function js_custom_init() {
             'plural'    => 'Locations',
             'single'    => 'Location',
             'menu_icon' => 'dashicons-location',
-            'supports'  => array('title','editor')
+            'supports'  => array('title','editor', 'thumbnail')
         )
     );
     

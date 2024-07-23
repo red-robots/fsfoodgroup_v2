@@ -20,6 +20,60 @@ function my_acf_init() {
 add_action('acf/init', 'my_acf_init');
 
 
+
+add_action('create_category', 'add_menu_order_term_meta');
+add_action('edited_category', 'add_menu_order_term_meta');
+
+function add_menu_order_term_meta($term_id) {
+    if (!get_term_meta($term_id, 'menu_order', true)) {
+        update_term_meta($term_id, 'menu_order', 0);
+    }
+}
+
+
+function get_terms_ordered_by_menu_order($taxonomy) {
+    // Get all terms for the given taxonomy
+    $terms = get_terms(array(
+        'taxonomy' => $taxonomy,
+        'hide_empty' => false,
+    ));
+
+    if (!empty($terms) && !is_wp_error($terms)) {
+        // Create an array to hold the terms with their menu_order
+        $terms_with_order = array();
+
+        // Loop through the terms to get their menu_order
+        foreach ($terms as $term) {
+            $menu_order = get_term_meta($term->term_id, 'menu_order', true);
+            $terms_with_order[] = array(
+                'term' => $term,
+                'menu_order' => intval($menu_order)
+            );
+        }
+
+        // Sort the terms by menu_order
+        usort($terms_with_order, function($a, $b) {
+            return $a['menu_order'] - $b['menu_order'];
+        });
+
+        // Extract the sorted terms
+        $sorted_terms = array_map(function($item) {
+            return $item['term'];
+        }, $terms_with_order);
+
+        return $sorted_terms;
+    }
+
+    return array();
+}
+
+
+
+
+
+
+
+
 function bellaworks_body_classes( $classes ) {
     // Adds a class of group-blog to blogs with more than 1 published author.
     if ( is_multi_author() ) {

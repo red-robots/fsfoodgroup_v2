@@ -20,8 +20,13 @@ get_header(); ?>
 			$map = get_field('map');
 			$links = get_field('links');
 			$num = count( $space );
+			if( $num == 1 ) {
+				$spaces = 'space';
+			} else {
+				$spaces = 'spaces';
+			}
 			// echo '<pre>';
-			// print_r($button);
+			// print_r($map);
 			
 			?>
 			<article class="article locations">
@@ -31,11 +36,11 @@ get_header(); ?>
 				<div class="wrapper">
 					<h1 class="entry-title text-center"><?php the_title(); ?></h1>
 					<div class="address">
-						<?php echo $map['address']; ?>
+						<?php echo $map['street_number'].' '.$map['street_name'].'</br>'.$map['city'].', '.$map['state_short'].' '.$map['post_code']; ?>
 					</div>
 					<?php if( $button ) { ?>
-						<div class="btn">
-							<a href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
+						<div class="buttondiv cf">
+							<a class="btn-default" href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
 						</div>
 					<?php } ?>
 					<!-- <div class="entry-content"><?php the_content(); ?></div> -->
@@ -48,7 +53,7 @@ get_header(); ?>
 					<?php echo $description; ?>
 					<?php if( $button ) { ?>
 						<div class="btn">
-							<a href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
+							<a class="btn-default" href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
 						</div>
 					<?php } ?>
 				</div>
@@ -57,8 +62,11 @@ get_header(); ?>
 			<?php if( $space ) { ?>
 				<section class="spaces">
 					<div class="spaces-info">
-						<h2>Spaces</h2>
-						<?php echo $num ?> spaces available for <?php the_title(); ?>
+						
+						<div class="num-spaces">
+							<h2>Spaces</h2>
+							<?php echo $num ?> <?php echo $spaces; ?> available for <?php the_title(); ?>
+						</div>
 					</div>
 					<div class="flex">
 						<?php foreach( $space as $s ) { 
@@ -87,7 +95,11 @@ get_header(); ?>
 
 			<section class="map">
 				<div class="links">
-					<div class="addy"><?php echo $map['address']; ?></div>
+					<div class="addy">
+						<h2><?php the_title(); ?></h2>
+						<?php echo $map['street_number'].' '.$map['street_name'].'</br>'.$map['city'].', '.$map['state_short'].' '.$map['post_code']; ?>
+							
+					</div>
 					
 					<?php foreach( $links as $link ) { ?>
 						<div class="btn">

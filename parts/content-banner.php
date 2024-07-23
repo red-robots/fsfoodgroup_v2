@@ -27,6 +27,15 @@ if( is_front_page() ) {
     <div class="banner-mirror"><img src="<?php echo $banner['url'] ?>" alt="<?php echo $banner['title'] ?>" /></div>
     <?php } ?>
 
+<?php } elseif( get_post_type() == 'location' ) { ?>
+        <div id="subpage-banner" class="subpage-banner cf">
+            <div class="banner-wrap">
+                <?php if( $custom_title ){ ?>
+                    <h2><?php echo $custom_title; ?></h2>
+                <?php } ?>
+            </div>
+            <img src="<?php echo get_the_post_thumbnail_url(); ?>"  />
+        </div>
 <?php } else { ?>
 
     <?php if ($banner) { ?>

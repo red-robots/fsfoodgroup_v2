@@ -20,7 +20,7 @@ $btn_link = get_field('button_link');
 
 					<?php if( $btn_link ) { ?>
 						<div class="buttondiv cf">
-							<a href="<?php echo $btn_link['url']; ?>" class="btn-default" target="<?php echo btn_link['target']; ?>">
+							<a href="<?php echo $btn_link['url']; ?>" class="btn-default" target="<?php echo $btn_link['target']; ?>">
 								<?php echo $btn_link['title']; ?>
 							</a>
 						</div>

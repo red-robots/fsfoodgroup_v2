@@ -96,7 +96,8 @@ jQuery(document).ready(function ($) {
     // Create gerenic map.
     var mapArgs = {
       zoom: $el.data('zoom') || 16,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: true
     };
     var map = new google.maps.Map($el[0], mapArgs);
 

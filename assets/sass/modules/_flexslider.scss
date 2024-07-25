@@ -110,6 +110,9 @@ html[xmlns] .flexslider .slides {
 }
 .flex-direction-nav {
   *height: 0;
+  width: 100%;
+  position: absolute;
+  top: 50%;
 }
 .flex-direction-nav a {
   text-decoration: none;
@@ -118,7 +121,7 @@ html[xmlns] .flexslider .slides {
   height: 50px;
   margin: -20px 0 0;
   position: absolute;
-  top: 50%;
+  top: 0%;
   z-index: 10;
   overflow: hidden;
   opacity: 0;

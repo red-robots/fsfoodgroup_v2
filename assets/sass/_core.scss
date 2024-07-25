@@ -2011,8 +2011,7 @@ section.restaurants {
 article.locations {
 	width: 100%;
 	float: left;
-	background-color: $nblue;
-	color: #fff;
+	color: $nblue;
 	text-align: center;
 	
 	.location-logo {
@@ -2020,6 +2019,8 @@ article.locations {
 		margin: 20px auto 50px auto;
 		img {
 			width: 100%;
+			filter: invert(100%);
+			opacity: .7;
 		}
 	}
 	.address {
@@ -2028,10 +2029,10 @@ article.locations {
 		margin-bottom: 40px;
 	}
 	.btn-default {
-		border: #fff 1px solid;
-		color: #fff;
+		// border: #fff 1px solid;
+		// color: #fff;
 		&:hover {
-			color: #FFF;
+			// color: #FFF;
 			&:before {
 				transform: scaleX(1);
 			}
@@ -2071,7 +2072,7 @@ section.spaces {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
-			max-width: 900px;
+			// max-width: 900px;
 			margin: 0 auto;
 		}
 	}
@@ -2079,6 +2080,8 @@ section.spaces {
 		width: 100%;
 		position: relative;
 		cursor: pointer;
+		// flex: 0 0 auto;
+		align-self: stretch;
 		@include mid {
 			width: auto;
 		}

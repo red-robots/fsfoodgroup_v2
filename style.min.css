@@ -189,8 +189,8 @@ html[xmlns] .flexslider .slides{display:block}
 .flex-viewport{max-height:2000px;-webkit-transition:all 1s ease;transition:all 1s ease}
 .loading .flex-viewport{max-height:300px}
 .carousel li{margin-right:5px}
-.flex-direction-nav{*height:0}
-.flex-direction-nav a{text-decoration:none;display:block;width:40px;height:50px;margin:-20px 0 0;position:absolute;top:50%;z-index:10;overflow:hidden;opacity:0;cursor:pointer;color:rgba(0,0,0,0.8);text-shadow:1px 1px 0 rgba(255,255,255,0.3);-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.flex-direction-nav{*height:0;width:100%;position:absolute;top:50%}
+.flex-direction-nav a{text-decoration:none;display:block;width:40px;height:50px;margin:-20px 0 0;position:absolute;top:0;z-index:10;overflow:hidden;opacity:0;cursor:pointer;color:rgba(0,0,0,0.8);text-shadow:1px 1px 0 rgba(255,255,255,0.3);-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 .flex-direction-nav a:before{font-family:"flexslider-icon";font-size:40px;display:inline-block;content:'\f001';color:rgba(0,0,0,0.8);text-shadow:1px 1px 0 rgba(255,255,255,0.3)}
 .flex-direction-nav a.flex-next:before{content:'\f002'}
 .flex-direction-nav .flex-prev{left:-50px}
@@ -471,12 +471,10 @@ section.restaurants .restaurant .info .learn{width:auto}
 section.restaurants .restaurant .info .learn span{border-bottom:2px solid #fff}
 section.restaurants .restaurant .flexslider{margin-bottom:0}
 section.restaurants .restaurant .flex-control-nav{bottom:20px}
-article.locations{width:100%;float:left;background-color:#33525f;color:#fff;text-align:center}
+article.locations{width:100%;float:left;color:#33525f;text-align:center}
 article.locations .location-logo{width:250px;margin:20px auto 50px auto}
-article.locations .location-logo img{width:100%}
+article.locations .location-logo img{width:100%;-webkit-filter:invert(100%);filter:invert(100%);opacity:.7}
 article.locations .address{width:100%;text-align:center;margin-bottom:40px}
-article.locations .btn-default{border:#fff 1px solid;color:#fff}
-article.locations .btn-default:hover{color:#FFF}
 article.locations .btn-default:hover:before{-webkit-transform:scaleX(1);transform:scaleX(1)}
 section.location-intro{width:100%;float:left}
 section.location-intro .wrap{max-width:750px;margin:0 auto;padding:60px 0}
@@ -484,7 +482,7 @@ section.spaces{width:100%}
 section.spaces .spaces-info{width:100%;padding:20px 0;text-align:center;color:#33525f}
 section.spaces .spaces-info .num-spaces{background-color:#33525f;color:#fff;padding:10px 0 20px 0;width:100%;float:left}
 section.spaces .flex{width:100%}
-section.spaces .space{width:100%;position:relative;cursor:pointer}
+section.spaces .space{width:100%;position:relative;cursor:pointer;-ms-flex-item-align:stretch;align-self:stretch}
 section.spaces .space:hover .details{opacity:1}
 section.spaces .space .image{width:100%;position:relative;z-index:10}
 section.spaces .space .image img{width:100%}
@@ -574,7 +572,7 @@ section.places .flex{-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:cent
 section.places .flex .place-l{width:10%;margin:0 20px}
 section.new-dining{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:distribute;justify-content:space-around;align-contents:stretch}
 section.new-dining .d-links{width:28%;margin-bottom:40px}
-section.spaces .flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;max-width:900px;margin:0 auto}
+section.spaces .flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:0 auto}
 section.spaces .space{width:auto}
 }@media(min-width:1200px){.careers .section.fsgroup .fslogo{height:6vw}
 .site-footer .fsgrouplogos .fsgrplogo{padding:10px 25px}

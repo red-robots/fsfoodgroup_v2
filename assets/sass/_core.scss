@@ -2026,7 +2026,10 @@ article.locations {
 	.address {
 		width: 100%;
 		text-align: center;
-		margin-bottom: 40px;
+		
+		&.empty {
+			margin-bottom: 40px;
+		}
 	}
 	.btn-default {
 		// border: #fff 1px solid;

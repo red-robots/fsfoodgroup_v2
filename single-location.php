@@ -25,6 +25,12 @@ get_header(); ?>
 			} else {
 				$spaces = 'spaces';
 			}
+
+			if( $description == '' ) {
+				$bClass = 'empty';
+			} else {
+				$bClass = 'full';
+			}
 			// echo '<pre>';
 			// print_r($map);
 			
@@ -35,9 +41,18 @@ get_header(); ?>
 				</div>
 				<div class="wrapper">
 					<h1 class="entry-title text-center"><?php the_title(); ?></h1>
-					<div class="address">
+					<div class="address <?php echo $bClass; ?>">
 						<?php echo $map['street_number'].' '.$map['street_name'].'</br>'.$map['city'].', '.$map['state_short'].' '.$map['post_code']; ?>
 					</div>
+
+					<?php if( $description ) { ?>
+						<section class="location-intro">
+							<div class="wrap">
+								<?php echo $description; ?>
+							</div>
+						</section>
+					<?php } ?>
+
 					<?php if( $button ) { ?>
 						<div class="buttondiv cf">
 							<a class="btn-default" href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
@@ -48,16 +63,7 @@ get_header(); ?>
 			</article>
 			<?php endwhile; ?>
 
-			<section class="location-intro">
-				<div class="wrap">
-					<?php echo $description; ?>
-					<?php if( $button ) { ?>
-						<div class="btn">
-							<a class="btn-default" href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
-						</div>
-					<?php } ?>
-				</div>
-			</section>
+			
 
 			<?php if( $space ) { ?>
 				<section class="spaces">

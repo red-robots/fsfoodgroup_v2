@@ -474,7 +474,8 @@ section.restaurants .restaurant .flex-control-nav{bottom:20px}
 article.locations{width:100%;float:left;color:#33525f;text-align:center}
 article.locations .location-logo{width:250px;margin:20px auto 50px auto}
 article.locations .location-logo img{width:100%;-webkit-filter:invert(100%);filter:invert(100%);opacity:.7}
-article.locations .address{width:100%;text-align:center;margin-bottom:40px}
+article.locations .address{width:100%;text-align:center}
+article.locations .address.empty{margin-bottom:40px}
 article.locations .btn-default:hover:before{-webkit-transform:scaleX(1);transform:scaleX(1)}
 section.location-intro{width:100%;float:left}
 section.location-intro .wrap{max-width:750px;margin:0 auto;padding:60px 0}
